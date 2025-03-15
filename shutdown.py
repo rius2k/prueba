@@ -6,8 +6,8 @@ GPIO.setup(boton_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 try:
     while True:
         if GPIO.input(boton_pin) == GPIO.HIGH:
-            print("Botón presionado")
-            #os.system('sudo shutdown now')
+            print("¡Botón presionado! Ejecutando el comando...")
+            os.system('sudo shutdown now')
             time.sleep(0.5)
         time.sleep(0.1)
 
